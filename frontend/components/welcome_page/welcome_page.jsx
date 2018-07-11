@@ -29,8 +29,13 @@ const WelcomePage = (props) => {
   if (props.currentUser) {
     return loggedIn();
   } else {
-    return notLoggedIn();
+    return (
+      <nav> </nav>
+    )
   }
+  // } else {
+  //   return notLoggedIn();
+  // }
 
 };
 
