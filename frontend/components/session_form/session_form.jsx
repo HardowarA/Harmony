@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return(
-      <ul>
+      <ul className="errorUlLogin">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -33,6 +33,10 @@ class SessionForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  componentDidMount() {
+    this.props.errorClear();
   }
 
   render() {
@@ -52,8 +56,7 @@ class SessionForm extends React.Component {
           <div className='title' >{messageOne}</div>
           <div className='sub-title' >{messageTwo}</div>
           <br/>
-          {this.renderErrors()}
-          <div className='loginContainer'>
+          <div className='loginErrors'>{this.renderErrors()}</div>
             <br/>
             <label className='loginLabel'>Username:
               <br/>
@@ -62,11 +65,10 @@ class SessionForm extends React.Component {
             <br/>
             <label className='loginLabel'>Password:
               <br/>
-              <input className="loginLabel" type="password" value={this.state.password} onChange={this.handleChange('password')} />
+              <input className="loginInput" type="password" value={this.state.password} onChange={this.handleChange('password')} />
             </label>
             <br/>
             <input className="loginButton" type="submit" value={buttonWords} />
-          </div>
           <div className='login-toggle' >{loginToggle} {this.props.navLink}</div>
         </form>
       </div>
