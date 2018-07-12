@@ -36,25 +36,34 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    let loginToggle = '';
+    let buttonWords = 'Continue';
+    if (this.props.formType === 'login') {
+      loginToggle = 'Need an account?';
+      buttonWords = 'Login';
+    }
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          Welcome to Harmony!
+      <div className='authWrap'>
+        <form className='authForm' onSubmit={this.handleSubmit}>
+          <div className='title' >Welcome back!</div>
+          <div className='sub-title' >We're so excited to see you again!'</div>
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
           {this.renderErrors()}
-          <div>
+          <div className='loginContainer'>
             <br/>
-            <label>Username:
+            <label className='loginLabel'>Username:
+              <br/>
               <input type="text" value={this.state.username} onChange={this.handleChange('username')} />
             </label>
             <br/>
-            <label>Password:
+            <label className='loginLabel'>Password:
+              <br/>
               <input type="password" value={this.state.password} onChange={this.handleChange('password')} />
             </label>
             <br/>
-            <input type="submit" value={this.props.formType} />
+            <input type="submit" value={buttonWords} />
           </div>
+          <div className='login-toggle' >{loginToggle} {this.props.navLink}</div>
         </form>
       </div>
     );

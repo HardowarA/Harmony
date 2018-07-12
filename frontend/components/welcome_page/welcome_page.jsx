@@ -1,15 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 const WelcomePage = (props) => {
 
   const notLoggedIn = () => {
     return (
-      <nav>
-        <Link to="/login">Login  </Link>
-
-        <Link to="/signup">  Sign Up</Link>
-      </nav>
+      <Redirect to="/login" />
     );
   };
 
