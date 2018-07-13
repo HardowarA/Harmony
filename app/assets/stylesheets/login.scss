@@ -12,7 +12,9 @@ html {
 
 .logo {
   color: white;
-  font-weight: 1000;
+  // font-weight: 1000;
+  padding: 20px;
+  z-index: 3;
   margin-left: 40px;
   margin-top: 40px;
 }

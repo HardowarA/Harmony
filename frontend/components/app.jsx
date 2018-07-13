@@ -9,7 +9,10 @@ const App = () => {
   return (
   <div>
     <header>
-      <div className= "logo" >Harmony</div>
+      <div className="logo"> 
+       <i className="fab fa-discord"></i>
+        Harmony
+      </div>
       <WelcomePageContainer />
     </header>
     <AuthRoute exact path="/login" component={LoginFormContainer} />
