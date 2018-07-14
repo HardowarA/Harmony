@@ -20,7 +20,6 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    
   end
 
 end
