@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
   has_many :servers,
   through: :server_memberships,
-  source: :servers 
+  source: :server 
 
   attr_reader :password
 

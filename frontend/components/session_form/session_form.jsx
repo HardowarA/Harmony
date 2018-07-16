@@ -7,7 +7,7 @@ class SessionForm extends React.Component {
     this.state = {
       username: '',
       password: ''
-    };
+    }; 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
           <div className='sub-title' >{messageTwo}</div>
           <br/>
           <div className='loginErrors'>{this.renderErrors()}</div>
-            <br/> 
+            <br/>
             <label className='loginLabel'>Username:
               <br/>
               <input className="loginInput" type="text" value={this.state.username} onChange={this.handleChange('username')} />

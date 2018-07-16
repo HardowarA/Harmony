@@ -18,6 +18,7 @@ const WelcomePage = (props) => {
         <button onClick={ props.logout }>
           Logout
         </button>
+        <Link to="/servers">Index</Link>
       </div>
     );
   };

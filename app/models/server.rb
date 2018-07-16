@@ -19,7 +19,7 @@ class Server < ApplicationRecord
 
   has_many :users,
   through: :server_memberships,
-  source: :users
+  source: :user
 
   belongs_to :creator,
   primary_key: :id,
