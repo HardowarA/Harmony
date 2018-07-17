@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import ServerIndexContainer from './server_index_container';
 
 class ServerForm extends React.Component {
   constructor(props) {
@@ -21,28 +20,12 @@ class ServerForm extends React.Component {
     e.preventDefault();
     const server = Object.assign({}, this.state);
     this.props.createServer(server);
+    this.setState({server_name: ''});
   }
-
-  // renderErrors() {
-  //   return(
-  //     <ul className="errorUlLogin">
-  //       {this.props.errors.map((error, i) => (
-  //         <li key={`error-${i}`}>
-  //           {error}
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
-
-  // componentDidMount() {
-  //   this.props.errorClear();
-  // }
 
   render() {
     return (
       <div>
-        <ServerIndexContainer />
         <form onSubmit={this.handleSubmit}>
           <div> Make a new Server! </div>
           <br/>

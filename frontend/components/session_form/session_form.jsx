@@ -7,7 +7,7 @@ class SessionForm extends React.Component {
     this.state = {
       username: '',
       password: ''
-    }; 
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -40,6 +40,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    // debugger
     let loginToggle = '';
     let buttonWords = 'Continue';
     let messageOne = 'Create an acount';

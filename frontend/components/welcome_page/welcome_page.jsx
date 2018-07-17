@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import ServerIndexContainer from '../server/server_index_container';
 
 const WelcomePage = (props) => {
 
@@ -13,12 +14,12 @@ const WelcomePage = (props) => {
     return (
       <div>
         <h2>
-          Welcome {props.currentUser.username}
+          Welcome {props.currentUser.username}#{props.currentUser.id}
         </h2>
         <button onClick={ props.logout }>
           Logout
         </button>
-        <Link to="/servers">Index</Link>
+        <Redirect to="/servers/1" />
       </div>
     );
   };

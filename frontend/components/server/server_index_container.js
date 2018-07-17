@@ -4,13 +4,13 @@ import ServerIndex from './server_index';
 
 const mapStateToProps = (state) => {
   return {
-    servers: Object.values(state.entities.servers)
+    servers: Object.values(state.entities.servers),
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    fetchServers: () => dispatch(fetchServers())
+    fetchServers: () => dispatch(fetchServers()),
   }
 }
 
