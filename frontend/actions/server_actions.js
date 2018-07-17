@@ -25,7 +25,7 @@ const removeServer = (payload) => {
     serverId: payload.server.id,
     server: payload.server,
     creator: payload.creator,
-    userIds: payload.server.userIds  
+    userIds: payload.server.userIds
   }
 }
 

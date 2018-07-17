@@ -20,7 +20,16 @@ class User < ApplicationRecord
 
   has_many :servers,
   through: :server_memberships,
-  source: :server 
+  source: :server
+
+  has_many :channel_memberships,
+  primary_key: :id,
+  foreign_key: :user_id,
+  class_name: :ChannelMembership
+
+  has_many :channels,
+  through: :channel_memberships,
+  source: :channel 
 
   attr_reader :password
 

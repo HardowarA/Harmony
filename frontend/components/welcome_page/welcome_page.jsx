@@ -19,7 +19,7 @@ const WelcomePage = (props) => {
         <button onClick={ props.logout }>
           Logout
         </button>
-        <Redirect to="/servers/1" />
+        <Redirect to={`/servers/${props.currentUser.serverIds[0]}`} />
       </div>
     );
   };

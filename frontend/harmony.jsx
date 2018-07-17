@@ -5,6 +5,8 @@ import Root from './components/root';
 
 import {login, signup, logout} from './actions/session_actions';
 import {fetchServers, fetchServer, createServer, deleteServer} from './actions/server_actions';
+import {fetchChannels, fetchChannel, createChannel, deleteChannel} from './actions/channel_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -33,6 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchServer = fetchServer;
   window.createServer = createServer;
   window.deleteServer = deleteServer;
+
+  window.fetchChannels = fetchChannels;
+  window.fetchChannel = fetchChannel;
+  window.createChannel = createChannel;
+  window.deleteChannel = deleteChannel;
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={ store }/>, root);

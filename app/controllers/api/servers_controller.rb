@@ -23,7 +23,7 @@ class Api::ServersController < ApplicationController
     if @server.save
       @server_membership = ServerMembership.new()
       @server_membership.user_id = current_user.id;
-      @server_membership.server_id = @server.id; 
+      @server_membership.server_id = @server.id;
       @server_membership.save
       render 'api/servers/show'
     else
@@ -37,7 +37,7 @@ class Api::ServersController < ApplicationController
       if @server.destroy
         render 'api/servers/show'
       else
-        render json: @post.errors.full_messages, status: 422
+        render json: @server.errors.full_messages, status: 422
       end
     else
       render json: ['Invalid credentials to access'], status: 401

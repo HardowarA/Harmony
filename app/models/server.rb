@@ -26,4 +26,9 @@ class Server < ApplicationRecord
   foreign_key: :creator_id,
   class_name: :User
 
+  has_many :channels,
+  primary_key: :id,
+  foreign_key: :server_id,
+  class_name: :Channel 
+
 end
