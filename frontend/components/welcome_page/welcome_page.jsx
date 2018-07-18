@@ -12,20 +12,23 @@ const WelcomePage = (props) => {
   const loggedIn = () => {
     return (
       <div>
-      <ServerIndexContainer />
+        <ServerIndexContainer />
         <div className="currentUserInfo">
           <h2>
-            Welcome {props.currentUser.username}#{props.currentUser.id}
+          Welcome {props.currentUser.username}#{props.currentUser.id}
           </h2>
           <button className="logoutButton" onClick={ props.logout }>
-            Logout
-          </button>
+          Logout
+          </button> 
         </div>
-
       </div>
     );
   };
 
+  // <div className="currentUserInfo">
+  // <Redirect to={`/servers/${props.currentUser.serverIds[0]}`} />
+  // </div>
+  //
   if (props.currentUser) {
     return loggedIn();
   } else {

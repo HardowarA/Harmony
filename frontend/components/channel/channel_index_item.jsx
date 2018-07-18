@@ -10,7 +10,7 @@ const ChannelIndexItem = ({ channel }) => {
   };
 
   return (
-    <Link to={`/servers/${channel.server_id}/${channel.id}`} onClick={redirectChannel}>{channel.channel_name}</Link>
+    <Link to={`/servers/${channel.server_id}/${channel.id}`} onClick={redirectChannel} className="channelItem">{channel.channel_name}</Link>
   );
 };
 

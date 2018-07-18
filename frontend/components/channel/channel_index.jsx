@@ -48,11 +48,9 @@ class ChannelIndex extends React.Component {
     });
 
     return (
-      <div className="channelIndex"> 
+      <div className="channelList">
         {this.props.server_name}
-        <ul>
-          {channels}
-        </ul>
+        {channels}
         <ChannelFormContainer />
       </div>
     );

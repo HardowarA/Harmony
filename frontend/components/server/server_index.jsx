@@ -11,7 +11,13 @@ class ServerIndex extends React.Component {
   render() {
     const servers = this.props.servers.map(server => {
       return (
-        <ServerIndexItem key={server.id} server={server} />
+        <div>
+          <br/>
+          <br/>
+            <ServerIndexItem key={server.id} server={server} />
+          <br/>
+          <br/>
+        </div>
       );
     });
 

@@ -6,11 +6,6 @@ import ChannelShowContainer from '../channel/channel_show_container';
 
 
 class ServerShow extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   debugger
-  //   // this.forceUpdate();
-  // }
 
   componentDidMount() {
     this.props.fetchServer(this.props.match.params.serverId);
@@ -57,7 +52,7 @@ class ServerShow extends React.Component {
       server_id = server.id;
     }
     return (
-      <div className="channelIndex">
+      <div className="channelIndex"> 
         <br/>
         <ChannelIndexContainer server_id={server_id} server_name={server_name} />
       </div>

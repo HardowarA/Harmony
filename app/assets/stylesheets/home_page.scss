@@ -8,20 +8,49 @@
   margin:0;
   top:0;
   left:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.channelList{
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .channelIndex {
   background: #2C2F33;
+  display: flex;
+  flex-direction: column;
+}
+
+.channelItem {
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 5px; 
+}
+
+.serverItem {
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: 15px;
+  border-radius: 50%;
+  background: #7289DA;
+  text-decoration: none;
 }
 
 .channelShowMessage {
+  width:85%;
   background: #99AAB5;
 }
 
 .channelShowUser {
+  width: 15%;
   background: #2C2F33;
 }
-
 
 
 .app {
@@ -42,6 +71,7 @@ ul {
 }
 
 .channelShow {
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
