@@ -1,6 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import ServerIndexContainer from './server_index_container';
+import ChannelIndexContainer from '../channel/channel_index_container';
+import ChannelShowContainer from '../channel/channel_show_container';
+
 
 class ServerShow extends React.Component {
   // constructor(props) {
@@ -13,13 +16,23 @@ class ServerShow extends React.Component {
     this.props.fetchServer(this.props.match.params.serverId);
   }
 
+  componentDidUpdate(prevProps) {
+    if(prevProps.server !== undefined) {
+      if(this.props.server.id !== prevProps.server.id) {
+
+        this.props.fetchServer(this.props.match.params.serverId);
+      }
+    }
+  }
+
 
   // componentWillReceiveProps() {
   //   debugger
   // }
   //
   // shouldComponentUpdate(nextState, nextProps) {
-  //   debugger
+  //   this.props.fetchServer(this.props.match.params.serverId);
+  //
   // }
   //
   // componentWillUpdate(nextProps, nextState) {
@@ -27,7 +40,7 @@ class ServerShow extends React.Component {
   // }
   //
   // componentDidUpdate(prevProps, prevState) {
-  //   debugger
+  //
   // }
   //
   // componentWillUnmount() {
@@ -37,15 +50,16 @@ class ServerShow extends React.Component {
 
   render() {
     let server_name = '';
+    let server_id = -1;
     const server = this.props.server;
     if (server !== undefined) {
       server_name = server.server_name;
+      server_id = server.id;
     }
     return (
-      <div>
-        <ServerIndexContainer />
+      <div className="channelIndex">
         <br/>
-        {server_name}
+        <ChannelIndexContainer server_id={server_id} server_name={server_name} />
       </div>
     );
   }

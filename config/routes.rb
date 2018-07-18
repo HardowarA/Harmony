@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   root to: 'static_pages#root'
 
   namespace :api, defaults: {format: :json} do
-    resources :users, only: [:create]
+    resources :users, only: [:create, :index, :show] 
     resource :session, only: [:create, :destroy]
     resources :servers, except: [:update, :edit] do
-      resources :channels, only: [:create]
+      resources :channels, only: [:create, :index]
     end
-    resources :channels, except: [:create, :edit, :update] 
+    resources :channels, except: [:create, :edit, :update, :index]
 
   end
 

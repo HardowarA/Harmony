@@ -1,6 +1,5 @@
 import React from 'react';
 import ServerIndexItem from './server_index_item';
-import WelcomePageContainer from '../welcome_page/welcome_page_container';
 import ServerFormContainer from './server_form_container';
 
 class ServerIndex extends React.Component {
@@ -17,11 +16,11 @@ class ServerIndex extends React.Component {
     });
 
     return (
-      <div>
+      <div> 
         <ul>
           {servers}
         </ul>
-        <ServerFormContainer /> 
+        <ServerFormContainer />
       </div>
     );
   }

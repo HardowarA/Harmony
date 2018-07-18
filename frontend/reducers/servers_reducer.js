@@ -24,7 +24,9 @@ const serversReducer = (state = {}, action) => {
       for(let server in newState) {
         let stateholder = newState[server]
         if(stateholder.id === channel.server_id) {
-          stateholder.channelIds.push(channel.id);
+          if(stateholder.channelIds.includes(channel.id) === false) {
+            stateholder.channelIds.push(channel.id);
+          }
           break;
         }
       }

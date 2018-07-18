@@ -1,7 +1,9 @@
 class Api::ChannelsController < ApplicationController
 
   def index
-    @channels = current_user.channels
+    allChannels = current_user.channels
+    @channels = allChannels.select {|channel| channel.server_id == params[:server_id].to_i}
+    # @channels = params[:server_id]
     render 'api/channels/index'
   end
 
@@ -35,7 +37,7 @@ class Api::ChannelsController < ApplicationController
   def destroy
     @channel = Channel.find(params[:id])
     @server = Server.find(@channel.server_id)
-    if @server.creator_id == current_user.id 
+    if @server.creator_id == current_user.id
       if @channel.destroy
         render 'api/channels/show'
       else

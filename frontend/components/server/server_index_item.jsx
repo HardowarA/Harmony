@@ -1,10 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, Redirect } from 'react-router-dom';
 
 const ServerIndexItem = ({ server }) => {
+
+  const redirectServer = (server) => {
+    return(
+      <Redirect to={`/servers/${server.id}`} />
+    );
+  };
+
   return (
-    <Link to={`/servers/${server.id}`}>{server.server_name}</Link>
+    <Link to={`/servers/${server.id}`} onClick={redirectServer}>
+      {server.server_name}
+    </Link>
   );
 };
 

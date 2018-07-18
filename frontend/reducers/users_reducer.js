@@ -2,6 +2,7 @@ import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 import { merge } from 'lodash';
 import { RECEIVE_SERVER, REMOVE_SERVER } from '../actions/server_actions';
 import { RECEIVE_CHANNEL, REMOVE_CHANNEL } from '../actions/channel_actions';
+import { RECEIVE_USERS } from '../actions/user_actions';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -9,6 +10,8 @@ const usersReducer = (state = {}, action) => {
   let channel;
   let stateholder;
   switch (action.type) {
+    case RECEIVE_USERS:
+      return action.users
     case RECEIVE_CURRENT_USER:
       return merge({}, state, { [action.currentUser.id]: action.currentUser });
     case RECEIVE_SERVER:
@@ -31,7 +34,9 @@ const usersReducer = (state = {}, action) => {
       for(let key in newState) {
         let stateholder = newState[key];
         if (channel.userIds.includes(stateholder.id)) {
-          stateholder.channelIds.push(channel.id);
+          if(stateholder.channelIds.includes(channel.id) === false) {
+            stateholder.channelIds.push(channel.id);
+          }
         }
       }
       return newState;

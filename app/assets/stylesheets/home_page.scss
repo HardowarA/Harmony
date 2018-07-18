@@ -1,0 +1,47 @@
+.currentUserInfo {
+}
+
+.serverIndex {
+  height: 100%;
+  background: #23272A;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+}
+
+.channelIndex {
+  background: #2C2F33;
+}
+
+.channelShowMessage {
+  background: #99AAB5;
+}
+
+.channelShowUser {
+  background: #2C2F33;
+}
+
+
+
+.app {
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background:rgba(255,255,255,0.5);
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.channelShow {
+  display: flex;
+  flex-direction: row;
+}

@@ -27,9 +27,9 @@ const removeChannel = (payload) => {
   }
 }
 
-export const fetchChannels = () => {
+export const fetchChannels = (route) => {
   return dispatch => {
-    return ChannelApiUtil.fetchChannels().then(channels => {
+    return ChannelApiUtil.fetchChannels(route).then(channels => {
       return dispatch(receiveChannels(channels))
     });
   };
@@ -43,9 +43,9 @@ export const fetchChannel = (id) => {
   };
 };
 
-export const createChannel = (channelPackage) => {
+export const createChannel = (channel) => {
   return dispatch => {
-    return ChannelApiUtil.createChannel(channelPackage).then(channel => {
+    return ChannelApiUtil.createChannel(channel).then(channel => {
       return dispatch(receiveChannel(channel))
     });
   };

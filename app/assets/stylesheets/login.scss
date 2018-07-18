@@ -1,8 +1,29 @@
-html {
-  height: 100%;
+.applogin {
+  // height: 100%;
   background-image: image-url('discordBackground.png');
   background-repeat: no-repeat;
   background-size: cover;
+
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  // background:rgba(255,255,255,0.5);
+  // display: flex;
+  // flex-direction: row;
+}
+
+.appHeader {
+  height: 100%;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
 }
 
 .authWrap {
