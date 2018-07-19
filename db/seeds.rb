@@ -6,19 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# User.delete_all
-# Server.delete_all
-# Channel.delete_all
-# ChannelMembership.delete_all
-# ServerMembership.delete_all
-# Message.delete_all
+User.delete_all
+Server.delete_all
+Channel.delete_all
+ChannelMembership.delete_all
+ServerMembership.delete_all
+Message.delete_all
 
 user1 = User.create({username: "demo_user", password: "123456"})
 user2 = User.create({username: "Cha0s The0ry", password: "123456"})
 user3 = User.create({username: "Nite", password: "123456"})
 user4 = User.create({username: "LionHeart829", password: "123456"})
 user5 = User.create({username: "CrazyG3rbil", password: "123456"})
-user6 = User.create({username: "Exovius", password: "123456"})
+# user6 = User.create({username: "Exovius", password: "123456"})
+user6 = User.create({username: "natthebat", password: "123456"})
 user7 = User.create({username: "Aaron", password: "123456"})
 user8 = User.create({username: "RichieTheRich", password: "123456"})
 

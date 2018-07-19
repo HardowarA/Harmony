@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .channelList{
@@ -67,6 +68,7 @@
   height: 95%;
   flex-direction: row;
   overflow-y: auto;
+  border-bottom: 1px solid grey;
 }
 
 .messageInput {
