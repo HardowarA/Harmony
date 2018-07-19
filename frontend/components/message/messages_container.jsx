@@ -7,7 +7,6 @@ import { withRouter } from 'react-router-dom';
 
 
 const mapStateToProps = (state, ownProps) => {
-
   return {
     channelId: ownProps.match.params.channelId,
     channel: state.entities.channels[ownProps.match.params.channelId],
@@ -20,7 +19,7 @@ const selectMessages = (state, ownProps) => {
   if(state.entities.channels[ownProps.match.params.channelId] !== undefined) {
     let channel = state.entities.channels[ownProps.match.params.channelId];
     let messages = channel.message_ids.sort((a,b) => a - b).map((id) => state.entities.messages[id]);
-    return messages.reverse();
+    return messages;
   }
 }
 

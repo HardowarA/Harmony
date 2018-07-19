@@ -13,25 +13,23 @@ class Messages extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    
-    if(prevProps.messages[prevProps.messages.length-1] !== undefined){
-      if (prevProps.messages[prevProps.messages.length-1].id !== this.props.messages[this.props.messages.length-1].id) {
 
-        this.props.fetchChannel(this.props.channelId);
-        this.subscription.unsubscribe();
-        this.setUpSubscription(this.props.channelId);
-        // this.forceUpdate();
+    if (this.props.channelId !== prevProps.channelId) {
+       this.props.fetchChannel(this.props.channelId);
+       this.subscription.unsubscribe();
+       this.setUpSubscription(this.props.channelId);
+     }
+    if(prevProps.messages !== undefined && this.props.messages !== undefined){
+      if(prevProps.messages[prevProps.messages.length-1] !== undefined && this.props.messages[this.props.messages.length-1] !== undefined){
+        if (prevProps.messages[prevProps.messages.length-1].id !== this.props.messages[this.props.messages.length-1].id) {
+
+          this.props.fetchChannel(this.props.channelId);
+          this.subscription.unsubscribe();
+          this.setUpSubscription(this.props.channelId);
+        }
       }
     }
   }
-
-  // componentWillReceiveProps(newProps) {
-  //   if (newProps.channelId !== this.props.channelId) {
-  //     this.props.fetchChannel(newProps.channelId);
-  //     this.subscription.unsubscribe();
-  //     this.setUpSubscription(newProps.channelId);
-  //   }
-  // }
 
   componentWillUnMount(){
     this.subscription.unsubscribe();
@@ -97,26 +95,32 @@ class Messages extends React.Component {
 
   render() {
     const { users } = this.props;
-
-    if ( this.props.messages[0] === undefined ) {
+    if(this.props.messages === undefined) {
       return (
         <div className="messages-box">
         </div>
       )
     } else {
-      let messages = this.props.messages;
-      return (
-        <div className="messages-box">
-          <ul className="messages-ul">
-            { messages.map ((message) => {
-              return <MessageItem key={message.id} message={message} author={users[message.author_id]}/>
-            })}
-            <li className="beginning-of-messages">
-                <span> </span><span> </span>
-            </li>
-          </ul>
-        </div>
-      )
+      if ( this.props.messages[0] === undefined ) {
+        return (
+          <div className="messages-box">
+          </div>
+        )
+      } else {
+        let messages = this.props.messages;
+        return (
+          <div className="messages-box">
+            <ul className="messages-ul">
+              { messages.map ((message) => {
+                return <MessageItem key={message.id} message={message} author={users[message.author_id]}/>
+              })}
+              <li className="beginning-of-messages">
+                  <span> </span><span> </span>
+              </li>
+            </ul>
+          </div>
+        )
+      }
     }
   }
 }

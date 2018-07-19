@@ -47,7 +47,7 @@ class MessageInput extends React.Component {
       <div className="create-message-div">
         <form className="create-message-form">
           <input autoComplete="off" id="message-input-id" value={this.state.body} placeholder="Enter Message!" onChange={this.handleChange} />
-          <button onClick={this.handleSubmit}></button>
+          <button onClick={this.handleSubmit} className="chatButton"></button>
         </form>
       </div>
     )
