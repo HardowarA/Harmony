@@ -29,7 +29,12 @@ class User < ApplicationRecord
 
   has_many :channels,
   through: :channel_memberships,
-  source: :channel 
+  source: :channel
+
+  has_many :messages,
+  primary_key: :id,
+  foreign_key: :author_id,
+  class_name: :Message  
 
   attr_reader :password
 

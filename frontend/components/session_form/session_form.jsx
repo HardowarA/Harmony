@@ -40,7 +40,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    // debugger
+    // //
     let loginToggle = '';
     let buttonWords = 'Continue';
     let messageOne = 'Create an acount';

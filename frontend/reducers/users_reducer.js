@@ -3,6 +3,8 @@ import { merge } from 'lodash';
 import { RECEIVE_SERVER, REMOVE_SERVER } from '../actions/server_actions';
 import { RECEIVE_CHANNEL, REMOVE_CHANNEL } from '../actions/channel_actions';
 import { RECEIVE_USERS } from '../actions/user_actions';
+import { RECEIVE_MESSAGE } from '../actions/message_actions';
+
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -52,6 +54,8 @@ const usersReducer = (state = {}, action) => {
         }
       }
       return newState;
+    case RECEIVE_MESSAGE:
+      return Object.assign({}, state, action.payload.users);
     default:
       return state;
   }

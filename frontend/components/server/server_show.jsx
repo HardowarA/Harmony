@@ -22,7 +22,7 @@ class ServerShow extends React.Component {
 
 
   // componentWillReceiveProps() {
-  //   debugger
+  //   //
   // }
   //
   // shouldComponentUpdate(nextState, nextProps) {
@@ -31,7 +31,7 @@ class ServerShow extends React.Component {
   // }
   //
   // componentWillUpdate(nextProps, nextState) {
-  //   debugger
+  //   //
   // }
   //
   // componentDidUpdate(prevProps, prevState) {
@@ -39,7 +39,7 @@ class ServerShow extends React.Component {
   // }
   //
   // componentWillUnmount() {
-  //   debugger
+  //   //
   // }
 
 

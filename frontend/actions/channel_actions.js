@@ -15,6 +15,7 @@ const receiveChannel = (payload) => {
   return {
     type: RECEIVE_CHANNEL,
     channel: payload.channel,
+    messages: payload.messages
   }
 }
 
