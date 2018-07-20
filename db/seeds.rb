@@ -18,8 +18,8 @@ user2 = User.create({username: "Cha0s The0ry", password: "123456"})
 user3 = User.create({username: "Nite", password: "123456"})
 user4 = User.create({username: "LionHeart829", password: "123456"})
 user5 = User.create({username: "CrazyG3rbil", password: "123456"})
-# user6 = User.create({username: "Exovius", password: "123456"})
-user6 = User.create({username: "natthebat", password: "123456"})
+user6 = User.create({username: "Exovius", password: "123456"})
+# user6 = User.create({username: "natthebat", password: "123456"})
 user7 = User.create({username: "Aaron", password: "123456"})
 user8 = User.create({username: "RichieTheRich", password: "123456"})
 
@@ -43,11 +43,11 @@ channel9 = Channel.create({channel_name: "Secondary Chat Room", server_id: serve
 
 channel10 = Channel.create({channel_name: "RandomChannel", server_id: server4.id})
 
-channel11 = Channel.create({channel_name: "Programmer Help", server_id: server5.id})
-channel12 = Channel.create({channel_name: "Job Help", server_id: server5.id})
-channel13 = Channel.create({channel_name: "Math Help", server_id: server5.id})
-channel14 = Channel.create({channel_name: "Writing Help", server_id: server5.id})
-channel15 = Channel.create({channel_name: "Random Help", server_id: server5.id})
+channel11 = Channel.create({channel_name: "Chat Room", server_id: server5.id})
+channel12 = Channel.create({channel_name: "Conversational Community", server_id: server5.id})
+channel13 = Channel.create({channel_name: "Spam Space", server_id: server5.id})
+channel14 = Channel.create({channel_name: "TalkTime", server_id: server5.id})
+channel15 = Channel.create({channel_name: "Random Convo", server_id: server5.id})
 
 
 ServerMembership.create({user_id: user7.id , server_id: server1.id})
