@@ -11,7 +11,7 @@ const WelcomePage = (props) => {
 
   const loggedIn = () => {
     return (
-      <div>
+      <div className="welcomePage">
         <ServerIndexContainer />
         <div className="currentUserInfo">
           {props.currentUser.username}

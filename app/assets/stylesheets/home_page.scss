@@ -9,47 +9,76 @@
   color: #b9bbbe;
 }
 
-.serverIndex {
-  height: 100%;
-  background: #23272A;
-  padding:0;
-  margin:0;
-  top:0;
-  left:0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: auto;
-  overflow-x: hidden;
+// CHANNEL MENU ______________________________________________________________
+
+.channelItem {
+  color: rgb(114, 118, 125);
+  text-decoration: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 1px 0;
 }
 
-.channelList{
+.channelItem:hover {
+  color: #fff;
+  background: rgba(114, 118, 125, 0.3);
+}
+
+.channelList {
+  font-size: 15px;
+  height: 100%;
+  width: 200px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  position: fixed;
+  background: #2f3136;
 }
+
+.channelListContent {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.channelListHeading {
+  height: 48px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.40);
+}
+
+.channelListHeading button {
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(114, 118, 125);
+  border: none;
+  box-sizing: border-box;
+  background: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.channelListHeading button:hover {
+  color: #fff;
+}
+
+
 
 .channelIndex {
   background: #2C2F33;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  margin-left: 78px;
 }
 
-.channelItem {
-  color: white;
-  text-decoration: none;
-  border-radius: 3px;
-  padding: 5px;
-}
-
-.serverItem {
-  border: 1px solid black;
-  padding: 20px;
-  margin-right: 25px;
-  border-radius: 50%;
-  background: #7289DA;
-  text-decoration: none;
-}
 
 .channelShowMessage {
   width:85%;
@@ -64,27 +93,11 @@
   // overflow-y: auto;
 }
 
-.serverAndButton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .channelShowUser {
+  margin-top: 48px;
   width: 15%;
   background: #2C2F33;
   color: #b9bbbe;
-}
-
-.createServerButton {
-  border: 1px solid black;
-  padding: 20px;
-  margin-left: 15px;
-  border-radius: 50%;
-  background: #7289DA;
-  text-decoration: none;
-  padding-left: 23px;
-  padding-right: 23px;
 }
 
 .channelShowAll {
@@ -95,6 +108,75 @@
   position: relative;
 }
 
+.channelHeader {
+  background: #36393f;
+  border-bottom: 1px solid rgba(0,0,0,0.40);
+  font-weight: bold;
+  position: fixed;
+  left: 278px;
+  right: 0;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 20px;
+}
+
+
+.channelShow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+}
+
+
+// SERVER MENU _______________________________________________________________
+.serverAndButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.serverIndex {
+  height: 100%;
+  background: #23272A;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+// ServersList wrapper for your serverItems
+.serversList {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// Put these two together because of similar class styles.
+.createServerButton, .serverItem {
+  text-decoration: none;
+  border: none;
+  padding: 20px;
+  margin: 6px auto;
+  border-radius: 50%;
+  background: #7289DA;
+  padding-left: 23px;
+  padding-right: 23px;
+  transition: border-radius 0.6s;
+}
+
+.createServerButton:hover, .serverItem:hover {
+  border-radius: 25%;
+}
+
+
+// MODALS ____________________________________________________________________
 .modal-background {
   position: fixed;
   top: 0;
@@ -113,9 +195,11 @@
 }
 
 
+// MESSAGE ___________________________________________________________________
 .messageShow {
   display: flex;
   height: 90%;
+  margin-top: 48px;
   flex-direction: row;
   overflow-y: auto;
   width: 100%;
@@ -124,12 +208,12 @@
 }
 
 .messageInput {
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  text-align: center;
 }
 
 
+// GENERAL ___________________________________________________________________
 .app {
   position:fixed;
   padding:0;
@@ -155,38 +239,34 @@ ul {
   list-style-type: none;
 }
 
-.channelShow {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
 .create-message-form {
-  height: 44px;
-  width: 100%;
   height: 100%;
-  align-content: center;
 }
 
 .create-message-div {
-  width: 90%;
-  height: 94px;
+  height: 85px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding: 30px;
+  padding-top: 20px;
   // border-top: 1px solid gray;
 }
 
-.create-message-div input {
-  margin: 25px 0px;
-  height: 44px;
-  width: 60%;
-  border-radius: 5px;
-  padding: 0 10px;
+.create-message-input {
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
   color: #737f8d;
-  background-color: #f6f6f7;
+  background-color: #52565e;
   font-size: 0.9375rem;
+}
+
+.create-message-input input {
+  width: 60%;
+  padding: 10px;
 }
 
 .create-server-container {
