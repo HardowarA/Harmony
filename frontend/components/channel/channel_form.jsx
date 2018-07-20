@@ -43,17 +43,23 @@ class ChannelForm extends React.Component {
   render() {
     return (
       <div>
+      <div className="create-server-container">
+      <div> Make a new Channel! </div>
+      <div className="create-server-div">
         <form onSubmit={this.handleSubmit}>
           <div onClick={this.props.closeModal}></div>
-          <div> Make a new Channel! </div>
           <br/>
           <label>Channel Name:
+            <br/>
             <br/>
             <input type="channel_name" value={this.state.channel_name} onChange={this.handleChange('channel_name')} />
           </label>
           <br/>
+          <br/>
           <input type="submit" value={"Create Channel"} />
         </form>
+        </div>
+        </div>
       </div>
     );
   }

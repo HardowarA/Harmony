@@ -13,7 +13,7 @@ ChannelMembership.delete_all
 ServerMembership.delete_all
 Message.delete_all
 
-user1 = User.create({username: "demo_user", password: "123456"})
+user1 = User.create({username: "String The0ry", password: "123456"})
 user2 = User.create({username: "Cha0s The0ry", password: "123456"})
 user3 = User.create({username: "Nite", password: "123456"})
 user4 = User.create({username: "LionHeart829", password: "123456"})
@@ -22,6 +22,8 @@ user6 = User.create({username: "Exovius", password: "123456"})
 # user6 = User.create({username: "natthebat", password: "123456"})
 user7 = User.create({username: "Aaron", password: "123456"})
 user8 = User.create({username: "RichieTheRich", password: "123456"})
+
+user9 = User.create({username: "Demo_User", password: "123456"})
 
 server1 = Server.create({server_name: "VIP Lounge", creator_id: user7.id})
 server2 = Server.create({server_name: "ProgrammerPlace", creator_id: user8.id})
@@ -156,3 +158,25 @@ ChannelMembership.create({user_id: user4.id , channel_id: channel15.id})
 ChannelMembership.create({user_id: user6.id , channel_id: channel15.id})
 ChannelMembership.create({user_id: user7.id , channel_id: channel15.id})
 ChannelMembership.create({user_id: user8.id , channel_id: channel15.id})
+
+ServerMembership.create({user_id: user9.id , server_id: server1.id})
+ServerMembership.create({user_id: user9.id , server_id: server2.id})
+ServerMembership.create({user_id: user9.id , server_id: server3.id})
+ServerMembership.create({user_id: user9.id , server_id: server4.id})
+ServerMembership.create({user_id: user9.id , server_id: server5.id})
+
+ChannelMembership.create({user_id: user9.id , channel_id: channel1.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel2.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel3.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel4.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel5.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel6.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel7.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel8.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel9.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel10.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel11.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel12.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel13.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel14.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel15.id})

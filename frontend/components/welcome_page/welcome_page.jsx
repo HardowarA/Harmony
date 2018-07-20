@@ -14,9 +14,7 @@ const WelcomePage = (props) => {
       <div>
         <ServerIndexContainer />
         <div className="currentUserInfo">
-          <h2>
-          Welcome {props.currentUser.username}#{props.currentUser.id}
-          </h2>
+          {props.currentUser.username}
           <button className="logoutButton" onClick={ props.logout }>
           Logout
           </button>
