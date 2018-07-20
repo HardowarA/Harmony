@@ -10,7 +10,7 @@ class Messages extends React.Component {
   componentWillMount() {
     this.props.fetchChannel(this.props.channelId);
     this.setUpSubscription(this.props.channelId);
-    setInterval(() => {this.props.fetchChannel(this.props.channelId)}, 3000);
+    setInterval(() => {this.props.fetchChannel(this.props.channelId)}, 5000);
   }
 
   componentDidUpdate(prevProps) {
