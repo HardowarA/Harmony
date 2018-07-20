@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
       buttonWords = 'Login';
       messageOne = 'Welcome back!';
       messageTwo = 'We\'re so excited to see you again!';
-      demoButtonBool = <button onClick={this.demo}>Demo User</button>;
+      demoButtonBool = <button className='demoButton' onClick={this.demo}>Demo User</button>;
     }
     return (
       <div className='applogin'>

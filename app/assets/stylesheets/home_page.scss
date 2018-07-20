@@ -24,18 +24,33 @@
   background: rgba(114, 118, 125, 0.3);
 }
 
-.channelList{
+.channelList {
   font-size: 15px;
+  height: 100%;
   width: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background: #2f3136;
+}
+
+.channelListContent {
+  padding-top: 10px;
   padding-left: 10px;
   padding-right: 30px;
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 
 .channelListHeading {
-  padding-bottom: 20px;
+  height: 48px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.40);
 }
 
 .channelListHeading button {
@@ -44,7 +59,7 @@
   font-weight: bold;
   color: rgb(114, 118, 125);
   border: none;
-  border-radius: 50%;
+  box-sizing: border-box;
   background: none;
   padding-left: 10px;
   padding-right: 10px;
@@ -60,6 +75,8 @@
   background: #2C2F33;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  margin-left: 78px;
 }
 
 
@@ -76,7 +93,9 @@
   // overflow-y: auto;
 }
 
-.channelShowUser { width: 15%;
+.channelShowUser { 
+  margin-top: 48px;
+  width: 15%;
   background: #2C2F33;
   color: #b9bbbe;
 }
@@ -89,12 +108,25 @@
   position: relative;
 }
 
+.channelHeader {
+  background: #36393f;
+  border-bottom: 1px solid rgba(0,0,0,0.40);
+  font-weight: bold;
+  position: fixed;
+  left: 278px;
+  right: 0;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 20px;
+}
+
 
 .channelShow {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
+  margin-left: 200px;
 }
 
 
@@ -167,6 +199,7 @@
 .messageShow {
   display: flex;
   height: 90%;
+  margin-top: 48px;
   flex-direction: row;
   overflow-y: auto;
   width: 100%;
@@ -175,9 +208,8 @@
 }
 
 .messageInput {
-  position: fixed;
-  bottom: 0;
   width: 100%;
+  text-align: center;
 }
 
 
@@ -208,30 +240,33 @@ ul {
 }
 
 .create-message-form {
-  height: 44px;
-  width: 100%;
   height: 100%;
-  align-content: center;
 }
 
 .create-message-div {
-  width: 90%;
-  height: 94px;
+  height: 85px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding: 30px;
+  padding-top: 20px;
   // border-top: 1px solid gray;
 }
 
-.create-message-div input {
-  margin: 25px 0px;
-  height: 44px;
-  width: 60%;
-  border-radius: 5px;
-  padding: 0 10px;
+.create-message-input {
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
   color: #737f8d;
-  background-color: #f6f6f7;
+  background-color: #52565e;
   font-size: 0.9375rem;
+}
+
+.create-message-input input {
+  width: 60%;
+  padding: 10px;
 }
 
 .create-server-container {

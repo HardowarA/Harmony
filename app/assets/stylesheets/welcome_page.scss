@@ -7,16 +7,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #24292e;
 }
 
 .currentUserInfo {
   word-wrap: break-word;
+  margin: auto 3px;
 }
 
 .logoutButton {
   width: 100%;
   height: 45px;
   border: 2px solid #85144b;
+  box-sizing: border-box;
   border-radius: 5px;
   background: none;
   color: #fff;

@@ -88,6 +88,10 @@
   border: none;
 }
 
+.loginButton:hover {
+  background-color: rgba(114, 137, 218, 0.9);
+}
+
 .loginInput {
   background-color: rgba(0,0,0,.1);
   border-color: rgba(0,0,0,.3);
@@ -122,3 +126,25 @@
   color: #b9bbbe;
   width: 100%;
 }
+
+.login-toggle {
+  margin-top: 20px;
+}
+
+.demoButton {
+  border: 1px solid #01FF70;
+  color: #fff;
+  border-radius: 5px;
+  background: none;
+  padding: 8px;
+  transition: background 0.4s;
+}
+
+.demoButton:hover {
+  background: #01FF70;
+  color: #111;
+}
+
+
+
+
