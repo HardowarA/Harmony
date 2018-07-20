@@ -4,26 +4,49 @@
 // CHANNEL MENU ______________________________________________________________
 
 .channelItem {
-  color: white;
+  color: rgb(114, 118, 125);
   text-decoration: none;
   border-radius: 3px;
-  border: 1px solid red;
-  padding: 5px;
+  padding: 5px 10px;
+  margin: 1px 0;
+}
+
+.channelItem:hover {
+  color: #fff;
+  background: rgba(114, 118, 125, 0.3);
 }
 
 .channelList{
-  border: 1px solid blue;
-  width: 300px;
-  padding-left: 5px;
-  padding-right: 20px;
+  font-size: 15px;
+  width: 200px;
+  padding-left: 10px;
+  padding-right: 30px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 
 .channelListHeading {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
+
+.channelListHeading button {
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(114, 118, 125);
+  border: none;
+  border-radius: 50%;
+  background: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.channelListHeading button:hover {
+  color: #fff;
+}
+
+
 
 .channelIndex {
   background: #2C2F33;

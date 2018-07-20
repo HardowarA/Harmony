@@ -15,7 +15,7 @@ const ChannelIndexItem = ({ channel }) => {
       onClick={redirectChannel} 
       className="channelItem"
       >
-      {channel.channel_name}
+      # {channel.channel_name}
     </Link>
   );
 };

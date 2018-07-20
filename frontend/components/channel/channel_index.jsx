@@ -51,9 +51,9 @@ class ChannelIndex extends React.Component {
       <div className="channelList">
         <div className="channelListHeading">
           # {this.props.server_name}
+          <button onClick={() => this.props.openModal('createChannel')}>+</button>
         </div>
         {channels}
-        <button onClick={() => this.props.openModal('createChannel')}>+</button>
       </div>
     );
   }
