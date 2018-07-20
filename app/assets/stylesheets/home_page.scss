@@ -37,7 +37,7 @@
 .serverItem {
   border: 1px solid black;
   padding: 20px;
-  margin-left: 15px;
+  margin-right: 25px;
   border-radius: 50%;
   background: #7289DA;
   text-decoration: none;
@@ -51,9 +51,26 @@
   // overflow-y: auto;
 }
 
+.serverAndButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .channelShowUser {
   width: 15%;
   background: #2C2F33;
+}
+
+.createServerButton {
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: 15px;
+  border-radius: 50%;
+  background: #7289DA;
+  text-decoration: none;
+  padding-left: 23px;
+  padding-right: 23px; 
 }
 
 .channelShowAll {
@@ -62,6 +79,24 @@
   flex-direction: column;
   position: relative;
 }
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 .messageShow {
   display: flex;

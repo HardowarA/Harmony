@@ -25,8 +25,8 @@ class ServerForm extends React.Component {
 
   render() {
     return (
-      <div>
         <form onSubmit={this.handleSubmit}>
+          <div onClick={this.props.closeModal}></div>
           <div> Make a new Server! </div>
           <br/>
           <label>Server Name:
@@ -36,7 +36,6 @@ class ServerForm extends React.Component {
           <br/>
           <input type="submit" value={"Create Server"} />
         </form>
-      </div>
     );
   }
 }

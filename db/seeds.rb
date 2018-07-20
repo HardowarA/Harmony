@@ -41,13 +41,13 @@ channel7 = Channel.create({channel_name: "Stack Debates", server_id: server2.id}
 channel8 = Channel.create({channel_name: "Main Chat Room", server_id: server3.id})
 channel9 = Channel.create({channel_name: "Secondary Chat Room", server_id: server3.id})
 
-channel10 = Channel.create({channel_name: "RandomChannel", server_id: server4.id})
+channel10 = Channel.create({channel_name: "RandomChannel", server_id: server5.id})
 
-channel11 = Channel.create({channel_name: "Programmer Help", server_id: server5.id})
-channel12 = Channel.create({channel_name: "Job Help", server_id: server5.id})
-channel13 = Channel.create({channel_name: "Math Help", server_id: server5.id})
-channel14 = Channel.create({channel_name: "Writing Help", server_id: server5.id})
-channel15 = Channel.create({channel_name: "Random Help", server_id: server5.id})
+channel11 = Channel.create({channel_name: "Programmer Help", server_id: server4.id})
+channel12 = Channel.create({channel_name: "Job Help", server_id: server4.id})
+channel13 = Channel.create({channel_name: "Math Help", server_id: server4.id})
+channel14 = Channel.create({channel_name: "Writing Help", server_id: server4.id})
+channel15 = Channel.create({channel_name: "Random Help", server_id: server4.id}) 
 
 
 ServerMembership.create({user_id: user7.id , server_id: server1.id})

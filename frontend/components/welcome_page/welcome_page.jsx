@@ -19,7 +19,7 @@ const WelcomePage = (props) => {
           </h2>
           <button className="logoutButton" onClick={ props.logout }>
           Logout
-          </button> 
+          </button>
         </div>
       </div>
     );

@@ -10,10 +10,11 @@ class Messages extends React.Component {
   componentWillMount() {
     this.props.fetchChannel(this.props.channelId);
     this.setUpSubscription(this.props.channelId);
+    setInterval(() => {this.props.fetchChannel(this.props.channelId)}, 3000);
   }
 
   componentDidUpdate(prevProps) {
-
+    // debugger
     if (this.props.channelId !== prevProps.channelId) {
        this.props.fetchChannel(this.props.channelId);
        this.subscription.unsubscribe();

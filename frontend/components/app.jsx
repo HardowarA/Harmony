@@ -10,17 +10,19 @@ import ServerShowContainer from './server/server_show_container';
 
 import ChannelShowContainer from './channel/channel_show_container';
 
+import Modal from './modal/modal';
+
 import { AuthRoute, Redirect } from '../util/route_util';
 
 const App = () => {
   return (
     <div className ="app">
+        <Modal />
         <div className="serverIndex">
           <WelcomePageContainer />
         </div>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        
         <Route path="/servers/:serverId" component={ServerShowContainer} />
         <Route exact path="/servers/:serverId/:channelId" component={ChannelShowContainer} />
     </div>

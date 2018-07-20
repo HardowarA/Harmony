@@ -44,6 +44,7 @@ class ChannelForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <div onClick={this.props.closeModal}></div>
           <div> Make a new Channel! </div>
           <br/>
           <label>Channel Name:

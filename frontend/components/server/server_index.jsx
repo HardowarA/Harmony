@@ -22,11 +22,11 @@ class ServerIndex extends React.Component {
     });
 
     return (
-      <div> 
+      <div className="serverAndButton">
         <ul>
           {servers}
         </ul>
-        <ServerFormContainer />
+        <button className="createServerButton" onClick={() => this.props.openModal('createServer')}>+</button>
       </div>
     );
   }

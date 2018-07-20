@@ -3,7 +3,6 @@ export const REMOVE_MESSAGE = "REMOVE_MESSAGE";
 import { createMessage, deleteMessage } from '../util/message_api_util'
 
 export const receiveMessage = (payload) => {
-
   return {
     type: RECEIVE_MESSAGE,
     payload
