@@ -93,7 +93,11 @@
   // overflow-y: auto;
 }
 
+<<<<<<< HEAD
 .channelShowUser {
+=======
+.channelShowUser { 
+>>>>>>> 19998da8b5bdc9c38fd12932b48b325784302ee4
   margin-top: 48px;
   width: 15%;
   background: #2C2F33;
@@ -149,6 +153,7 @@
   align-items: center;
   overflow-y: auto;
   overflow-x: hidden;
+<<<<<<< HEAD
 }
 
 // ServersList wrapper for your serverItems
@@ -158,6 +163,17 @@
   flex-direction: column;
 }
 
+=======
+}
+
+// ServersList wrapper for your serverItems
+.serversList {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+>>>>>>> 19998da8b5bdc9c38fd12932b48b325784302ee4
 // Put these two together because of similar class styles.
 .createServerButton, .serverItem {
   text-decoration: none;
@@ -167,7 +183,11 @@
   border-radius: 50%;
   background: #7289DA;
   padding-left: 23px;
+<<<<<<< HEAD
   padding-right: 23px;
+=======
+  padding-right: 23px; 
+>>>>>>> 19998da8b5bdc9c38fd12932b48b325784302ee4
   transition: border-radius 0.6s;
 }
 

@@ -16,7 +16,7 @@ const WelcomePage = (props) => {
         <div className="currentUserInfo">
           {props.currentUser.username}
           <button className="logoutButton" onClick={ props.logout }>
-          Logout
+            Logout
           </button>
         </div>
       </div>
