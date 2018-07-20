@@ -1,6 +1,74 @@
 .currentUserInfo {
 }
 
+// CHANNEL MENU ______________________________________________________________
+
+.channelItem {
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px solid red;
+  padding: 5px;
+}
+
+.channelList{
+  border: 1px solid blue;
+  width: 300px;
+  padding-left: 5px;
+  padding-right: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.channelListHeading {
+  padding-bottom: 30px;
+}
+
+.channelIndex {
+  background: #2C2F33;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.channelShowMessage {
+  width:85%;
+  background: #99AAB5;
+  display: flex;
+  flex-direction: column;
+  // overflow-y: auto;
+}
+
+.channelShowUser {
+  width: 15%;
+  background: #2C2F33;
+}
+
+.channelShowAll {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.channelShow {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+
+// SERVER MENU _______________________________________________________________
+.serverAndButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 .serverIndex {
   height: 100%;
   background: #23272A;
@@ -15,71 +83,32 @@
   overflow-x: hidden;
 }
 
-.channelList{
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
-
-.channelIndex {
-  background: #2C2F33;
-  display: flex;
-  flex-direction: column;
-}
-
-.channelItem {
-  color: white;
-  text-decoration: none;
-  border-radius: 3px;
-  padding: 5px;
-}
-
-.serverItem {
-  border: 1px solid black;
-  padding: 20px;
-  margin-right: 25px;
-  border-radius: 50%;
-  background: #7289DA;
-  text-decoration: none;
-}
-
-.channelShowMessage {
-  width:85%;
-  background: #99AAB5;
-  display: flex;
-  flex-direction: column;
-  // overflow-y: auto;
-}
-
-.serverAndButton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.channelShowUser {
-  width: 15%;
-  background: #2C2F33;
-}
-
-.createServerButton {
-  border: 1px solid black;
-  padding: 20px;
-  margin-left: 15px;
-  border-radius: 50%;
-  background: #7289DA;
-  text-decoration: none;
-  padding-left: 23px;
-  padding-right: 23px; 
-}
-
-.channelShowAll {
+// ServersList wrapper for your serverItems
+.serversList {
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
+// Put these two together because of similar class styles.
+.createServerButton, .serverItem {
+  text-decoration: none;
+  border: none;
+  padding: 20px;
+  margin: 6px auto;
+  border-radius: 50%;
+  background: #7289DA;
+  padding-left: 23px;
+  padding-right: 23px; 
+  transition: border-radius 0.6s;
+}
+
+.createServerButton:hover, .serverItem:hover {
+  border-radius: 25%;
+}
+
+
+// MODALS ____________________________________________________________________
 .modal-background {
   position: fixed;
   top: 0;
@@ -98,6 +127,7 @@
 }
 
 
+// MESSAGE ___________________________________________________________________
 .messageShow {
   display: flex;
   height: 95%;
@@ -112,6 +142,7 @@
 }
 
 
+// GENERAL ___________________________________________________________________
 .app {
   position:fixed;
   padding:0;
@@ -129,9 +160,3 @@ ul {
   list-style-type: none;
 }
 
-.channelShow {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}

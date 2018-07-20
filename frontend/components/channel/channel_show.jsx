@@ -41,7 +41,7 @@ class ChannelShow extends React.Component {
               <div className="messageShow">
                 {channel_name}
                 <div>
-                <MessagesContainer />
+                  <MessagesContainer />
                 </div>
               </div>
               <div className="messageInput">

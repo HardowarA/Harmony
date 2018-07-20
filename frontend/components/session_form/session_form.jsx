@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
     // //
     let loginToggle = '';
     let buttonWords = 'Continue';
-    let messageOne = 'Create an acount';
+    let messageOne = 'Create an account';
     let messageTwo;
     if (this.props.formType === 'login') {
       loginToggle = 'Need an account?';

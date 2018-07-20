@@ -11,14 +11,14 @@ const WelcomePage = (props) => {
 
   const loggedIn = () => {
     return (
-      <div>
+      <div className="welcomePage">
         <ServerIndexContainer />
         <div className="currentUserInfo">
-          <h2>
-          Welcome {props.currentUser.username}#{props.currentUser.id}
-          </h2>
+          <h5>
+            Welcome {props.currentUser.username}#{props.currentUser.id}
+          </h5>
           <button className="logoutButton" onClick={ props.logout }>
-          Logout
+            Logout
           </button>
         </div>
       </div>

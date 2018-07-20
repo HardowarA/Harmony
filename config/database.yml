@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: harmony_production
-  username: harmony
+  username: cookiejar
   password: <%= ENV['HARMONY_DATABASE_PASSWORD'] %>

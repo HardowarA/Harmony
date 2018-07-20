@@ -11,21 +11,15 @@ class ServerIndex extends React.Component {
   render() {
     const servers = this.props.servers.map(server => {
       return (
-        <div>
-          <br/>
-          <br/>
-            <ServerIndexItem key={server.id} server={server} />
-          <br/>
-          <br/>
-        </div>
+        <ServerIndexItem key={server.id} server={server} />
       );
     });
 
     return (
       <div className="serverAndButton">
-        <ul>
+        <div className="serversList">
           {servers}
-        </ul>
+        </div>
         <button className="createServerButton" onClick={() => this.props.openModal('createServer')}>+</button>
       </div>
     );
