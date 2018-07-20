@@ -53,7 +53,7 @@ class ChannelShow extends React.Component {
 
         <br/>
         <div className="channelShowUser">
-          <ul>Online:
+          <ul>Members:
             {channelUsers.map(function(user) {
               return <li><br/>{user.username}</li>
             })}

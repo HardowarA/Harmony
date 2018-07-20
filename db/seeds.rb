@@ -13,15 +13,17 @@ ChannelMembership.delete_all
 ServerMembership.delete_all
 Message.delete_all
 
-user1 = User.create({username: "demo_user", password: "123456"})
+user1 = User.create({username: "String The0ry", password: "123456"})
 user2 = User.create({username: "Cha0s The0ry", password: "123456"})
 user3 = User.create({username: "Nite", password: "123456"})
 user4 = User.create({username: "LionHeart829", password: "123456"})
 user5 = User.create({username: "CrazyG3rbil", password: "123456"})
-# user6 = User.create({username: "Exovius", password: "123456"})
-user6 = User.create({username: "natthebat", password: "123456"})
+user6 = User.create({username: "Exovius", password: "123456"})
+# user6 = User.create({username: "natthebat", password: "123456"})
 user7 = User.create({username: "Aaron", password: "123456"})
 user8 = User.create({username: "RichieTheRich", password: "123456"})
+
+user9 = User.create({username: "Demo_User", password: "123456"})
 
 server1 = Server.create({server_name: "VIP Lounge", creator_id: user7.id})
 server2 = Server.create({server_name: "ProgrammerPlace", creator_id: user8.id})
@@ -43,11 +45,11 @@ channel9 = Channel.create({channel_name: "Secondary Chat Room", server_id: serve
 
 channel10 = Channel.create({channel_name: "RandomChannel", server_id: server4.id})
 
-channel11 = Channel.create({channel_name: "Programmer Help", server_id: server5.id})
-channel12 = Channel.create({channel_name: "Job Help", server_id: server5.id})
-channel13 = Channel.create({channel_name: "Math Help", server_id: server5.id})
-channel14 = Channel.create({channel_name: "Writing Help", server_id: server5.id})
-channel15 = Channel.create({channel_name: "Random Help", server_id: server5.id})
+channel11 = Channel.create({channel_name: "Chat Room", server_id: server5.id})
+channel12 = Channel.create({channel_name: "Conversational Community", server_id: server5.id})
+channel13 = Channel.create({channel_name: "Spam Space", server_id: server5.id})
+channel14 = Channel.create({channel_name: "TalkTime", server_id: server5.id})
+channel15 = Channel.create({channel_name: "Random Convo", server_id: server5.id})
 
 
 ServerMembership.create({user_id: user7.id , server_id: server1.id})
@@ -156,3 +158,25 @@ ChannelMembership.create({user_id: user4.id , channel_id: channel15.id})
 ChannelMembership.create({user_id: user6.id , channel_id: channel15.id})
 ChannelMembership.create({user_id: user7.id , channel_id: channel15.id})
 ChannelMembership.create({user_id: user8.id , channel_id: channel15.id})
+
+ServerMembership.create({user_id: user9.id , server_id: server1.id})
+ServerMembership.create({user_id: user9.id , server_id: server2.id})
+ServerMembership.create({user_id: user9.id , server_id: server3.id})
+ServerMembership.create({user_id: user9.id , server_id: server4.id})
+ServerMembership.create({user_id: user9.id , server_id: server5.id})
+
+ChannelMembership.create({user_id: user9.id , channel_id: channel1.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel2.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel3.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel4.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel5.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel6.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel7.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel8.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel9.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel10.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel11.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel12.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel13.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel14.id})
+ChannelMembership.create({user_id: user9.id , channel_id: channel15.id})

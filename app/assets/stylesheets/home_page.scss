@@ -1,4 +1,12 @@
 .currentUserInfo {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 15px;
+  color: #b9bbbe;
 }
 
 // CHANNEL MENU ______________________________________________________________
@@ -57,19 +65,25 @@
 
 .channelShowMessage {
   width:85%;
-  background: #99AAB5;
+  background-image: image-url('discordChatBackground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  color: white;
   // overflow-y: auto;
 }
 
-.channelShowUser {
-  width: 15%;
+.channelShowUser { width: 15%;
   background: #2C2F33;
+  color: #b9bbbe;
 }
 
 .channelShowAll {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -90,7 +104,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 .serverIndex {
   height: 100%;
@@ -153,15 +166,18 @@
 // MESSAGE ___________________________________________________________________
 .messageShow {
   display: flex;
-  height: 95%;
+  height: 90%;
   flex-direction: row;
   overflow-y: auto;
-  border-bottom: 1px solid grey;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  // align-items: center;
 }
 
 .messageInput {
   position: fixed;
   bottom: 0;
+  width: 100%;
 }
 
 
@@ -174,7 +190,15 @@
   left:0;
   width: 100%;
   height: 100%;
-  background:rgba(255,255,255,0.5);
+  background-image: image-url('wumpusBackground.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
   display: flex;
   flex-direction: row;
 }
@@ -183,3 +207,75 @@ ul {
   list-style-type: none;
 }
 
+.create-message-form {
+  height: 44px;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+}
+
+.create-message-div {
+  width: 90%;
+  height: 94px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  // border-top: 1px solid gray;
+}
+
+.create-message-div input {
+  margin: 25px 0px;
+  height: 44px;
+  width: 60%;
+  border-radius: 5px;
+  padding: 0 10px;
+  color: #737f8d;
+  background-color: #f6f6f7;
+  font-size: 0.9375rem;
+}
+
+.create-server-container {
+  background-color: white;
+  height: 300px;
+  width: 520px;
+  border-radius: 5px;
+  padding: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  color: #7289da;
+}
+
+.create-server-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.create-server-container h1 {
+  margin-bottom: 40px;
+}
+
+.create-server-container input {
+  border: 2px solid black;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  text-align: left;
+  padding: 0px 20px;
+  color: black;
+}
+
+.create-server-container input:hover {
+  border: 2px solid #677bc4;
+}
+
+.create-server-container input:focus {
+  border: none;
+}

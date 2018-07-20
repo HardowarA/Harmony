@@ -9,6 +9,7 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demo = this.demo.bind(this);
   }
 
   handleChange(field) {
@@ -39,17 +40,27 @@ class SessionForm extends React.Component {
     this.props.errorClear();
   }
 
+  demo(e) {
+    e.preventDefault();
+    this.setState({
+      username: "Demo_User"
+    })
+    this.props.processForm({ username: "Demo_User", password: 123456 });
+  }
+
   render() {
     // //
     let loginToggle = '';
     let buttonWords = 'Continue';
     let messageOne = 'Create an account';
     let messageTwo;
+    let demoButtonBool = '';
     if (this.props.formType === 'login') {
       loginToggle = 'Need an account?';
       buttonWords = 'Login';
       messageOne = 'Welcome back!';
       messageTwo = 'We\'re so excited to see you again!';
+      demoButtonBool = <button onClick={this.demo}>Demo User</button>;
     }
     return (
       <div className='applogin'>
@@ -75,6 +86,7 @@ class SessionForm extends React.Component {
               </label>
               <br/>
               <input className="loginButton" type="submit" value={buttonWords} />
+              {demoButtonBool}
             <div className='login-toggle' >{loginToggle} {this.props.navLink}</div>
           </form>
         </div>

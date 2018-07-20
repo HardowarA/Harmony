@@ -41,7 +41,21 @@ class ChannelIndex extends React.Component {
 
 
   render() {
-    const channels = this.props.channels.map(channel => {
+    let channels = this.props.channels;
+    let correctChannels = [];
+    for(let key in channels) {
+        let channel = channels[key];
+        if (channel.server_id === this.props.server_id) {
+        correctChannels.push(channel);
+      }
+    }
+    // channels.forEach(channel => {
+    //   if (channel.serverId === this.props.server_id) {
+    //     debugger
+    //     correctChannels.push(channel);
+    //   }
+    // });
+    let renderChannels = correctChannels.map(channel => {
       return (
         <ChannelIndexItem key={channel.id} channel={channel} />
       );
@@ -53,7 +67,7 @@ class ChannelIndex extends React.Component {
           # {this.props.server_name}
           <button onClick={() => this.props.openModal('createChannel')}>+</button>
         </div>
-        {channels}
+        {renderChannels}
       </div>
     );
   }

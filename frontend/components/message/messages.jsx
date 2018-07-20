@@ -7,10 +7,17 @@ class Messages extends React.Component {
     super(props);
   }
 
-  componentWillMount() {
+  getMessages() {
+    this.props.fetchChannel(this.props.channelId);
+    this.subscription.unsubscribe();
+    this.setUpSubscription(this.props.channelId);
+  }
+
+  componentDidMount() {
     this.props.fetchChannel(this.props.channelId);
     this.setUpSubscription(this.props.channelId);
-    setInterval(() => {this.props.fetchChannel(this.props.channelId)}, 5000);
+    setInterval(() => {this.getMessages()}, 3000);
+
   }
 
   componentDidUpdate(prevProps) {
@@ -23,11 +30,10 @@ class Messages extends React.Component {
     if(prevProps.messages !== undefined && this.props.messages !== undefined){
       if(prevProps.messages[prevProps.messages.length-1] !== undefined && this.props.messages[this.props.messages.length-1] !== undefined){
         if (prevProps.messages[prevProps.messages.length-1].id !== this.props.messages[this.props.messages.length-1].id) {
-
           this.props.fetchChannel(this.props.channelId);
           this.subscription.unsubscribe();
           this.setUpSubscription(this.props.channelId);
-        }
+       }
       }
     }
   }
@@ -52,9 +58,9 @@ class Messages extends React.Component {
           case "redirect_to_server":
             history.push(`/channels/${payload}`);
             break;
-          // case "update_users":
-          //   receiveOnlineStatus(payload);
-          //   break;
+          case "update_users":
+            receiveOnlineStatus(payload);
+            break;
           case "delete_message":
             removeMessage(payload);
             break;
