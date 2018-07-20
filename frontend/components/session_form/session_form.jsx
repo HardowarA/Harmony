@@ -66,7 +66,6 @@ class SessionForm extends React.Component {
       <div className='applogin'>
         <div className="logo">
          <i className="fab fa-discord"></i>
-          Harmony
         </div>
         <div className='authWrap'>
           <form className='authForm' onSubmit={this.handleSubmit}>
