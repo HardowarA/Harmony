@@ -11,13 +11,7 @@ class Message < ApplicationRecord
   foreign_key: :channel_id,
   class_name: :Channel
 
-  # has_one :server ?
-  # through: channel,
-  # source: server
-
-  after_create_commit do
-    NewMessageEventBroadcastJob.perform_later(self)
-  end
+  after_create_commit { NewMessageEventBroadcastJob.perform_later(self) }
 
   before_destroy do
     channel = Channel.find(self.channel_id)

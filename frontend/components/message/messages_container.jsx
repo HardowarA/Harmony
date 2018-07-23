@@ -10,12 +10,12 @@ const mapStateToProps = (state, ownProps) => {
   return {
     channelId: ownProps.match.params.channelId,
     channel: state.entities.channels[ownProps.match.params.channelId],
-    messages: selectMessages(state, ownProps),
+    messages: filterMessages(state, ownProps),
     users: state.entities.users
   }
 }
 
-const selectMessages = (state, ownProps) => {
+const filterMessages = (state, ownProps) => {
   if(state.entities.channels[ownProps.match.params.channelId] !== undefined) {
     let channel = state.entities.channels[ownProps.match.params.channelId];
     let messages = channel.message_ids.sort((a,b) => a - b).map((id) => state.entities.messages[id]);
@@ -27,7 +27,6 @@ const mapDispatchToProps = dispatch => ({
   fetchChannel: (id) => dispatch(fetchChannel(id)),
   receiveMessage: (message) => dispatch(receiveMessage(message)),
   receiveServer: (server) => dispatch(receiveServer(server)),
-  removeMessage: (message) => dispatch(removeMessage(message))
 })
 
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Messages));

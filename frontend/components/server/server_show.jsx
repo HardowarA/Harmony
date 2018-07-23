@@ -20,29 +20,6 @@ class ServerShow extends React.Component {
     }
   }
 
-
-  // componentWillReceiveProps() {
-  //   //
-  // }
-  //
-  // shouldComponentUpdate(nextState, nextProps) {
-  //   this.props.fetchServer(this.props.match.params.serverId);
-  //
-  // }
-  //
-  // componentWillUpdate(nextProps, nextState) {
-  //   //
-  // }
-  //
-  // componentDidUpdate(prevProps, prevState) {
-  //
-  // }
-  //
-  // componentWillUnmount() {
-  //   //
-  // }
-
-
   render() {
     let server_name = '';
     let server_id = -1;
@@ -52,7 +29,7 @@ class ServerShow extends React.Component {
       server_id = server.id;
     }
     return (
-      <div className="channelIndex"> 
+      <div className="channelIndex">
         <br/>
         <ChannelIndexContainer server_id={server_id} server_name={server_name} />
       </div>

@@ -13,22 +13,16 @@
   background: #24292e;
 }
 
-.currentUserInfo {
-  word-wrap: break-word;
-  margin: auto 3px;
-}
 
 .logoutButton {
-  width: 100%;
-  height: 45px;
-  border: 2px solid #85144b;
+  border: none;
   box-sizing: border-box;
-  border-radius: 5px;
-  background: none;
-  color: #fff;
-  transition: background 0.5s;
+  background: #85144b;
+  color: rgba(255,255,255, 0.9);
+  transition: background 0.5s, color 0.2s;
 }
 
 .logoutButton:hover {
-  background: #85144b;
+  background: rgba(133, 20, 75, 0.8);
+  color: #fff;
 }
