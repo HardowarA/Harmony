@@ -49,12 +49,6 @@ class ChannelIndex extends React.Component {
         correctChannels.push(channel);
       }
     }
-    // channels.forEach(channel => {
-    //   if (channel.serverId === this.props.server_id) {
-    //     debugger
-    //     correctChannels.push(channel);
-    //   }
-    // });
     let renderChannels = correctChannels.map(channel => {
       return (
         <ChannelIndexItem key={channel.id} channel={channel} />
@@ -64,11 +58,20 @@ class ChannelIndex extends React.Component {
     return (
       <div className="channelList">
         <div className="channelListHeading">
-          # {this.props.server_name}
+          {this.props.server_name}
           <button onClick={() => this.props.openModal('createChannel')}>+</button>
         </div>
         <div className="channelListContent">
           {renderChannels}
+        </div>
+        <div className="currentUserInfo">
+          {this.props.currentUser.username}
+          <button
+            className="logoutButton"
+            onClick={ this.props.logout }
+            >
+            Logout
+          </button>
         </div>
       </div>
     );

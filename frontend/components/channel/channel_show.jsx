@@ -57,7 +57,7 @@ class ChannelShow extends React.Component {
         <div className="channelShowUser">
           <ul>Members:
             {channelUsers.map(function(user) {
-              return <li><br/>{user.username}</li>
+              return <li key={user.id}><br/>{user.username}</li>
             })}
           </ul>
         </div>
